@@ -1,0 +1,35 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "Arisan Keluarga",
+      "admin": "0xA1B2C3D4E5F678901234567890ABCDEF12345678",
+      "monthlyAmount": "1 ETH",
+      "maxParticipants": 5,
+      "currentRound": 2,
+      "participants": [
+        { "address": "0x1111...abcd", "hasPaid": true, "hasWon": false },
+        { "address": "0x2222...abcd", "hasPaid": true, "hasWon": false },
+        { "address": "0x3333...abcd", "hasPaid": false, "hasWon": false },
+        { "address": "0x4444...abcd", "hasPaid": true, "hasWon": true },
+        { "address": "0x5555...abcd", "hasPaid": true, "hasWon": false }
+      ],
+      "winners": {
+        "1": "0x4444...abcd"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Arisan Kantor",
+      "admin": "0xBBCCDD11223344556677889900AABBCCDDEEFF11",
+      "monthlyAmount": "0.5 ETH",
+      "maxParticipants": 3,
+      "currentRound": 1,
+      "participants": [
+        { "address": "0xAAAA...BBBB", "hasPaid": true, "hasWon": false },
+        { "address": "0xCCCC...DDDD", "hasPaid": false, "hasWon": false }
+      ],
+      "winners": {}
+    }
+  ]
+}
