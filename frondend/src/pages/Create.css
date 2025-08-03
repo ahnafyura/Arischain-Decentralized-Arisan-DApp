@@ -9,7 +9,7 @@ body {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-.create-container {
+.Ccreate-Ccontainer {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ body {
   padding: 20px;
 }
 
-.container, .create-container {
+.Ccontainer, .Ccreate-container {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -58,12 +58,12 @@ body {
   font-weight: bold;
 }
 
-.header {
+.Cheader {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.logo {
+.Clogo {
   font-size: 24px;
   font-weight: 600;
   color: #2c3e50;
@@ -71,28 +71,28 @@ body {
   margin-top: 10px;
 }
 
-.form-grid {
+.Cform-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
   margin-bottom: 30px;
 }
 
-.form-group {
+.Cform-group {
   display: flex;
   flex-direction: column;
 }
 
-.form-group.full-width {
+.Cform-group.full-width {
   grid-column: 1 / -1;
 }
 
-.form-group.description {
+.Cform-group.description {
   grid-column: 2;
   grid-row: 3;
 }
 
-.form-group.draw {
+.Cform-group.draw {
   grid-column: 1;
   grid-row: 3;
 }
@@ -158,23 +158,23 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .create-container {
+  .Ccreate-container {
     padding: 30px 25px;
     margin: 10px;
   }
 
-  .form-grid {
+  .Cform-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .form-group.description,
-  .form-group.draw {
+  .Cform-group.description,
+  .Cform-group.draw {
     grid-column: 1;
     grid-row: auto;
   }
 
-  .logo {
+  .Clogo {
     font-size: 20px;
   }
 }

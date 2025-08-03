@@ -1,62 +1,39 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Join.css";
 
 function Join() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nickName: "",
     walletAddress: "",
     contributionAmount: ""
   });
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle confirm join
   const confirmJoin = (e) => {
     e.preventDefault();
-    console.log("Confirming join with data:", formData);
-    alert("Join confirmed successfully!");
+
+    // Simpan data ke route state
+    navigate("/dashboard-member", { state: formData });
   };
 
   return (
     <div className="join-body">
-      {/* Wave Decorations */}
       <div className="wave-decoration wave-left">
-        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0,50 Q50,20 100,50 T200,50 L200,100 L0,100 Z"
-            fill="rgba(120, 219, 226, 0.2)"
-          />
-          <path
-            d="M0,60 Q50,30 100,60 T200,60 L200,100 L0,100 Z"
-            fill="rgba(255, 218, 121, 0.15)"
-          />
+        <svg viewBox="0 0 200 100">
+          <path d="M0,50 Q50,20 100,50 T200,50 L200,100 L0,100 Z" fill="rgba(120, 219, 226, 0.2)" />
+          <path d="M0,60 Q50,30 100,60 T200,60 L200,100 L0,100 Z" fill="rgba(255, 218, 121, 0.15)" />
         </svg>
       </div>
 
-      <div className="wave-decoration wave-right">
-        <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0,50 Q50,20 100,50 T200,50 L200,100 L0,100 Z"
-            fill="rgba(120, 219, 226, 0.2)"
-          />
-          <path
-            d="M0,60 Q50,30 100,60 T200,60 L200,100 L0,100 Z"
-            fill="rgba(255, 218, 121, 0.15)"
-          />
-        </svg>
-      </div>
-
-      {/* Form Container */}
       <div className="join-container">
-        <button
-          className="back-button"
-          onClick={() => window.history.back()}
-        ></button>
+        <button className="back-button" onClick={() => navigate(-1)}></button>
 
-        <div className="header">
+        <div className="join-header">
           <div className="logo">ARISCHAIN</div>
         </div>
 
@@ -98,9 +75,7 @@ function Join() {
             />
           </div>
 
-          <button type="submit" className="confirm-button">
-            Confirm
-          </button>
+          <button type="submit" className="confirm-button">Confirm</button>
         </form>
       </div>
     </div>

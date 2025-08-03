@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ArisanContext } from "../context/ArisanContext";
 import "./Create.css";
 
 function Create() {
   const navigate = useNavigate();
+  const { setGroupData } = useContext(ArisanContext);
 
   const [formData, setFormData] = useState({
     groupName: "",
@@ -17,12 +19,10 @@ function Create() {
 
   const [errors, setErrors] = useState({});
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Validate form
   const validateForm = () => {
     let newErrors = {};
     if (!formData.groupName) newErrors.groupName = "Group Name is required";
@@ -31,37 +31,34 @@ function Create() {
     if (!formData.startTime) newErrors.startTime = "Start Time is required";
     if (!formData.contributionAmount) newErrors.contributionAmount = "Contribution Amount is required";
     if (!formData.draw) newErrors.draw = "Draw is required";
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!validateForm()) {
       alert("Please fill all required fields before submitting.");
       return;
     }
 
-    console.log("Saving form data:", formData);
-    alert("Form saved successfully!");
+    // Simpan data ke context
+    setGroupData(formData);
 
-    // Navigate to DashboardAdmin.jsx
+    alert("Form saved successfully!");
     navigate("/dashboard-admin");
   };
 
   return (
-    <div className="create-container">
+    <div className="Ccreate-container">
       <button className="back-button" onClick={() => navigate(-1)}></button>
 
-      <div className="header">
-        <div className="logo">ARISCHAIN</div>
+      <div className="Cheader">
+        <div className="Clogo">ARISCHAIN</div>
       </div>
 
-      <form className="form-grid" onSubmit={handleSubmit}>
-        <div className="form-group">
+      <form className="Cform-grid" onSubmit={handleSubmit}>
+        <div className="Cform-group">
           <label htmlFor="groupName">Group Name *</label>
           <input
             type="text"
@@ -73,7 +70,7 @@ function Create() {
           {errors.groupName && <span className="error-text">{errors.groupName}</span>}
         </div>
 
-        <div className="form-group admin-address">
+        <div className="Cform-group admin-address">
           <label htmlFor="adminAddress">Admin Address *</label>
           <input
             type="text"
@@ -85,7 +82,7 @@ function Create() {
           {errors.adminAddress && <span className="error-text">{errors.adminAddress}</span>}
         </div>
 
-        <div className="form-group">
+        <div className="Cform-group">
           <label htmlFor="maxMember">Maximum Member *</label>
           <input
             type="number"
@@ -97,7 +94,7 @@ function Create() {
           {errors.maxMember && <span className="error-text">{errors.maxMember}</span>}
         </div>
 
-        <div className="form-group">
+        <div className="Cform-group">
           <label htmlFor="startTime">Start Time *</label>
           <input
             type="datetime-local"
@@ -109,7 +106,7 @@ function Create() {
           {errors.startTime && <span className="error-text">{errors.startTime}</span>}
         </div>
 
-        <div className="form-group">
+        <div className="Cform-group">
           <label htmlFor="contributionAmount">Contribution Amount (ETH) *</label>
           <input
             type="number"
@@ -122,7 +119,7 @@ function Create() {
           {errors.contributionAmount && <span className="error-text">{errors.contributionAmount}</span>}
         </div>
 
-        <div className="form-group description">
+        <div className="Cform-group description">
           <label htmlFor="groupDescription">Group Description (Optional)</label>
           <textarea
             id="groupDescription"
@@ -133,7 +130,7 @@ function Create() {
           ></textarea>
         </div>
 
-        <div className="form-group draw full-width">
+        <div className="Cform-group draw full-width">
           <label htmlFor="draw">Draw *</label>
           <input
             type="text"
