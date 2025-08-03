@@ -13,21 +13,75 @@ Arischain is a blockchain-based Decentralized Application (DApp) platform design
 
 ```
 Arischain/
-├── contracts/           # Solidity smart contracts
-│   └── Arisan.sol       # Main arisan contract
-├── scripts/             # Deployment scripts
-│   └── deploy.js        # Script to deploy the contract
-├── test/                # Contract testing files
-│   └── ArisanTest.js    # Unit tests
-├── frontend/            # Web frontend (React)
-│   ├── public/
-│   └── src/
-│       ├── pages/
-│       ├── components/
-│       └── App.js
-├── hardhat.config.js    # Hardhat configuration file
-├── package.json         # Node.js dependencies
-└── README.md            # Project documentation
+│
+├── artifacts/                  # Compiled contract artifacts
+│
+├── cache/                      # Hardhat build cache
+│
+├── contracts/                  # Solidity smart contracts
+│   └── Arisan.sol              # Main arisan smart contract
+│
+├── frontend/                   # Frontend React application
+│   ├── public/                 # Static files (favicon, images, etc.)
+│   └── src/                    # React source code
+│       ├── abis/               # ABI JSON files from compiled contracts
+│       ├── assets/             # Images, icons, and other static assets
+│       ├── components/         # Reusable UI components
+│       │   ├── Features.jsx
+│       │   ├── Footer.jsx
+│       │   ├── Header.jsx
+│       │   ├── Hero.jsx
+│       │   ├── Started.jsx
+│       │   └── Whyjsx
+│       │
+│       ├── context/            # Global state management (React Context)
+│       │   └── ArisanContext.jsx
+│       │
+│       ├── data/               # Mock and static data
+│       │   └── mockArisanData.js
+│       │
+│       ├── hooks/              # Custom React hooks
+│       │   └── useArisanContract.js
+│       │
+│       ├── pages/              # Application pages
+│       │   ├── Create.jsx
+│       │   ├── DashboardAdmin.jsx
+│       │   ├── DashboardMember.jsx
+│       │   ├── Join.jsx
+│       │   ├── Create.css
+│       │   ├── DashboardAdmin.css
+│       │   ├── DashboardMember.css
+│       │   └── Join.css
+│       │
+│       ├── utils/              # Utility functions and mock services
+│       │   └── mockService.js
+│       │
+│       ├── App.jsx             # Main React component
+│       ├── App.css             # Global app styling
+│       ├── configs.js          # App configuration file
+│       ├── index.css           # Root CSS
+│       ├── index.js            # React entry point
+│       ├── main.jsx            # App bootstrap
+│       ├── main.css            # Main style sheet
+│       ├── main.scss           # SCSS styling (if used)
+│       └── routes.jsx          # Application routing
+│
+├── ignition/                   # Deployment modules (optional for Hardhat)
+│
+├── node_modules/               # Project dependencies
+│
+├── scripts/                    # Deployment scripts
+│   └── deploy.js
+│
+├── test/                       # Contract unit tests
+│   └── Arisan.js
+│
+├── .env                        # Environment variables
+├── hardhat.config.js           # Hardhat configuration
+├── package.json                # Node.js dependencies
+├── package-lock.json           # Lockfile for exact dependency versions
+└── README.md                   # Project documentation
+
 ```
 
 ## 🧪 How to Run Locally
