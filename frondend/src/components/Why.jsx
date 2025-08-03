@@ -13,7 +13,7 @@ function Why() {
       <div className="started3">
         <img src="src\assets\Vector 13.png" alt="" />
       </div>
-      <img src="src\assets\Group 34.png" alt="" className="last" />
+      {/* <img src="src\assets\Group 34.png" alt="" className="last" /> */}
     </section>
   );
 }

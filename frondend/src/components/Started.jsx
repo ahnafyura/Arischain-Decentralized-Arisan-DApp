@@ -65,27 +65,50 @@ function Started() {
 
       <div className="started2">
         <div className="started-side1">
-          <img src="src/assets/Group 31.png" alt="" id="side1-img" className="started-img"/>
+          <img
+            src="src/assets/Group 31.png"
+            alt=""
+            id="side1-img"
+            className="started-img"
+          />
           <div className="side1-content1">
             <h3>Choose Action</h3>
             <p>
               Select "Create Arisan" to start your own group, or "Join Arisan"
               to join an existing one.
             </p>
-            <button onClick={handleJoin} disabled={loading} className="btn-action">
+            <button
+              onClick={handleJoin}
+              disabled={loading}
+              className="btn-action"
+            >
               🚀 Join Arisan
             </button>
           </div>
+          <img
+            src="src\assets\ChatGPT Image Jul 28, 2025, 09_29_50 PM 1.png"
+            alt=""
+            id="side1-2-img"
+          />
           <div className="side1-content2">
             <h3>Deposit Funds</h3>
             <p>
               Send funds to the smart contract to securely lock your
               contribution.
             </p>
-            <button onClick={handlePay} disabled={loading} className="btn-action">
+            <button
+              onClick={handlePay}
+              disabled={loading}
+              className="btn-action"
+            >
               💰 Pay Contribution
             </button>
           </div>
+          <img
+            src="src\assets\ChatGPT Image Jul 28, 2025, 11_12_52 PM 1.png"
+            alt=""
+            id="side1-img3"
+          />
         </div>
 
         <div className="started-side2">
@@ -96,7 +119,8 @@ function Started() {
           <div className="side3-content1">
             <h3>Connect Wallet</h3>
             <p>
-              Use a wallet like Metamask to connect to the Hardhat Localhost Network.
+              Use a wallet like Metamask to connect to the Hardhat Localhost
+              Network.
             </p>
           </div>
           <img
@@ -111,13 +135,22 @@ function Started() {
               amount, and draw schedule.
             </p>
           </div>
+          <img
+            src="src\assets\ChatGPT Image Jul 28, 2025, 09_57_25 PM 1.png"
+            alt=""
+            id="side3-2img"
+          />
           <div className="side3-content3">
             <h3>Start the Arisan</h3>
             <p>
               Once all members join and deposit, the arisan will begin
               automatically according to schedule.
             </p>
-            <button onClick={handleDraw} disabled={loading} className="btn-action">
+            <button
+              onClick={handleDraw}
+              disabled={loading}
+              className="btn-action"
+            >
               🎲 Draw Winner
             </button>
           </div>
