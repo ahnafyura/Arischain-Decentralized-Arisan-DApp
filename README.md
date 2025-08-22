@@ -2,7 +2,7 @@
 
 Arischain is a blockchain-based Decentralized Application (DApp) platform designed to revolutionize the traditional arisan system in Indonesia. Utilizing smart contract technology, Arischain ensures transparency, security, and fairness in managing digital arisan groups. Every transaction is permanently recorded on the blockchain, minimizing the risk of manipulation and increasing trust among participants.
 
-## 🚀 Features__
+## 🚀 Features
 
 * **Decentralized System**: Operates on Ethereum-based smart contracts.
 * **Transparent Transactions**: All activities are traceable and recorded on-chain.
