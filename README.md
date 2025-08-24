@@ -9,7 +9,7 @@ Arischain is a blockchain-based Decentralized Application (DApp) platform design
 * **Secure Participation**: Wallet connection via MetaMask for safe identity and funds management.
 * **Arisan Management**: Create or join arisan groups with customizable parameters.
 
-## 📦 Project Structure__
+## 📦 Project Structure
 
 ```
 Arischain/
