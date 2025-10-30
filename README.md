@@ -10,7 +10,7 @@ Arischain is a blockchain-based Decentralized Application (DApp) platform design
 * **Arisan Management**: Create or join arisan groups with customizable parameters.
 
 ## Project Structure
-
+ 
 ```
 Arischain/
 │
