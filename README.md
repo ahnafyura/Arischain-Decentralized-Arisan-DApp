@@ -84,7 +84,7 @@ Arischain/
 
 ```
 
-## 🧪 How to Run Locally
+## 🧪 How to Run Locally :D
 
 ### 1. Clone the Repository
 
